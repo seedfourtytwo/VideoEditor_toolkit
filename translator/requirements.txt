@@ -1,0 +1,32 @@
+# Translation Module Requirements
+# Core Machine Learning & GPU Acceleration
+torch>=2.0.0                 # PyTorch - Deep learning framework (install GPU version separately)
+transformers>=4.30.0         # Hugging Face Transformers - NLP models and utilities
+accelerate>=0.26.0          # Memory optimization for large language models
+sentencepiece>=0.1.99       # Tokenizer for neural machine translation
+protobuf>=3.20.0            # Protocol buffers for model serialization
+huggingface-hub>=0.20.3     # Model downloading and caching utilities
+
+# File Format Support
+pysrt>=1.1.2                # SRT subtitle file handling
+webvtt-py>=0.4.6            # WebVTT subtitle file handling
+chardet>=4.0.0              # Character encoding detection for files
+
+# Progress and Utilities
+tqdm>=4.65.0                # Progress bar for long-running operations
+python-dotenv>=1.0.0        # Environment variable management
+pathlib>=1.0.1              # Object-oriented filesystem paths
+typing-extensions>=4.5.0    # Additional type hinting support
+pyyaml>=6.0.1              # YAML configuration file support
+
+# Optional Performance Improvements
+numpy>=1.24.0               # Numerical computing (speeds up tensor operations)
+safetensors>=0.4.0          # Efficient tensor serialization
+
+# Note: For GPU support, install PyTorch with CUDA:
+# pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+
+# Memory Requirements:
+# - NLLB-200 1.3B (default): ~8GB disk space, 6GB GPU memory recommended
+# - NLLB-200 3.3B (large): ~20GB disk space, 12GB GPU memory recommended
+# - M2M-100 (fallback): ~5GB disk space, 4GB GPU memory recommended 

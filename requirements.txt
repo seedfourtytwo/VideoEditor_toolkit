@@ -1,0 +1,89 @@
+# Video-Edit Project Requirements
+# Comprehensive requirements for all modules
+
+###########################################
+# Translation Module Dependencies
+###########################################
+# Core Machine Learning
+torch>=2.0.0                 # Deep learning framework
+transformers>=4.30.0         # NLP models and utilities
+accelerate>=0.26.0          # Memory optimization for large models
+sentencepiece>=0.1.99       # Neural translation tokenizer
+protobuf>=3.20.0            # Model serialization
+huggingface-hub>=0.20.3     # Model management and caching
+
+# Subtitle Formats
+pysrt>=1.1.2                # SRT subtitle handling
+webvtt-py>=0.4.6            # WebVTT subtitle handling
+
+###########################################
+# Transcription Module Dependencies
+###########################################
+# Speech Recognition
+openai-whisper>=20231117    # OpenAI's speech recognition model
+SpeechRecognition>=3.10.0   # Multiple speech recognition engines
+
+# Audio Processing
+soundfile>=0.13.1           # Audio file reading/writing
+pydub>=0.25.1              # Audio file manipulation
+
+###########################################
+# Video Processing Module Dependencies
+###########################################
+# Core Video Processing
+moviepy>=1.0.3              # Video editing and processing
+ffmpeg-python>=0.2.0        # FFmpeg Python bindings
+
+# Video Download
+yt-dlp>=2023.12.30         # YouTube and video download utility
+
+###########################################
+# Text-to-Speech Module Dependencies
+###########################################
+gTTS>=2.3.2                # Google Text-to-Speech
+
+###########################################
+# Shared/Common Dependencies
+###########################################
+# Progress and Utilities
+tqdm>=4.65.0                # Progress bars
+python-dotenv>=1.0.0        # Environment configuration
+pathlib>=1.0.1              # Filesystem paths
+typing-extensions>=4.5.0    # Type hinting
+pyyaml>=6.0.1              # YAML support
+chardet>=4.0.0              # Character encoding detection
+
+# Performance Optimization
+numpy>=1.24.0               # Numerical computing
+safetensors>=0.4.0          # Efficient tensor serialization
+
+###########################################
+# Optional/Alternative Services
+###########################################
+# Google Cloud Services (commented by default)
+# googletrans>=4.0.0-rc1     # Google Translate API (free)
+# google-cloud-translate>=3.11.1    # Google Cloud Translation API
+# google-cloud-texttospeech>=2.14.1 # Google Cloud TTS
+# google-api-python-client>=2.90.0  # Google API client
+# google-auth>=2.22.0        # Google authentication
+# google-auth-oauthlib>=1.0.0 # Google OAuth support
+
+###########################################
+# Installation Notes
+###########################################
+# 1. GPU Support (recommended for translation and transcription):
+#    pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+
+# 2. Memory Requirements:
+#    - Translation (NLLB-200 1.3B): 8GB disk, 6GB GPU RAM
+#    - Translation (NLLB-200 3.3B): 20GB disk, 12GB GPU RAM
+#    - Transcription (Whisper): 10GB disk, 4GB GPU RAM
+
+# 3. Optional Components:
+#    - For Google Cloud services, additional setup and API keys required
+#    - Some features may require FFmpeg installed on the system
+
+# 4. Environment Setup:
+#    - Create a .env file for API keys and configuration
+#    - Ensure CUDA toolkit is installed for GPU support
+#    - Consider using a virtual environment 

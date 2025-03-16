@@ -1,0 +1,14 @@
+# Main video/audio processing libraries
+moviepy>=2.1.2          # Core video processing library
+ffmpeg-python>=0.2.0    # Python bindings for FFmpeg
+
+# MoviePy core dependencies
+decorator>=4.0.2        # Required for MoviePy function decorators
+imageio>=2.5           # Image I/O operations
+imageio-ffmpeg>=0.2.0  # FFmpeg integration for imageio
+numpy>=1.25.0          # Numerical operations and array handling
+proglog<=1.0.0         # Progress logging for MoviePy
+pillow>=9.2.0          # Image processing library
+
+# Progress tracking and user interface
+tqdm>=4.65.0           # Progress bar functionality 
